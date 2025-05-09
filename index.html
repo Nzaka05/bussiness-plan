@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Crown Pineapples | Kenya Business Plan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FFD700;
+            --primary-dark: #E6C200;
+            --secondary: #4CAF50;
+            --secondary-dark: #388E3C;
+            --accent: #FF6B6B;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --background: #FFFDF7;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--text-dark);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 60%;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .accent-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .pineapple-card {
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .pineapple-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-dark);
+        }
+        
+        .nav-link.active {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+        
+        .nav-link.active:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 1rem;
+            right: 1rem;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 1.5px;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            padding-bottom: 2rem;
+            border-left: 2px solid var(--primary);
+        }
+        
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        table th, table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        table th {
+            background-color: rgba(255, 215, 0, 0.1);
+            font-weight: 600;
+        }
+        
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .collapsible-btn {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            text-align: left;
+            padding: 1rem 1.5rem;
+            background-color: white;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .collapsible-btn:hover {
+            background-color: rgba(255, 215, 0, 0.05);
+        }
+        
+        .active-collapsible {
+            max-height: 1000px;
+            transition: max-height 1s ease;
+        }
+        
+        .rotate-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .highlighted-text {
+            background: linear-gradient(120deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0));
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-bar-fill {
+            height: 100%;
+            background: var(--secondary);
+            border-radius: 4px;
+        }
+        
+        @media print {
+            .navbar {
+                position: static !important;
+                display: none;
+            }
+            
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+                padding: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 left-0 right-0 bg-white shadow-md z-50 print:hidden">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <h1 class="text-2xl font-bold">
+                        <span class="text-yellow-500">Golden Crown</span> 
+                        <span class="text-green-600">Pineapples</span>
+                    </h1>
+                </div>
+                <div class="overflow-x-auto w-full md:w-auto">
+                    <ul class="flex space-x-1 md:space-x-3">
+                        <li><a href="#intro" class="nav-link">Home</a></li>
+                        <li><a href="#market" class="nav-link">Market</a></li>
+                        <li><a href="#business" class="nav-link">Business</a></li>
+                        <li><a href="#product" class="nav-link">Product</a></li>
+                        <li><a href="#operations" class="nav-link">Operations</a></li>
+                        <li><a href="#marketing" class="nav-link">Marketing</a></li>
+                        <li><a href="#financial" class="nav-link">Financial</a></li>
+                        <li><a href="#legal" class="nav-link">Legal</a></li>
+                        <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                        <li><a href="#conclusion" class="nav-link">Conclusion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-4 mt-20">
+        <!-- Intro Section -->
+        <section id="intro" class="section">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                        <span class="block">KENYA</span>
+                        <span class="accent-gradient">PINEAPPLE</span>
+                    </h1>
+                    <p class="text-xl mb-6">Comprehensive Business Plan for Establishing a Premium Pineapple Production and Processing Company in Kenya</p>
+                    <h2 class="text-3xl font-semibold mb-4">Golden Crown Pineapples</h2>
+                    <p class="text-gray-600">Business Plan Prepared: 2024</p>
+                    <div class="mt-8">
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-1">
+                            Explore Our Vision
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-yellow-400 rounded-full opacity-50"></div>
+                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-green-400 rounded-full opacity-50"></div>
+                        <div class="pineapple-card bg-white p-8 relative z-10">
+                            <div class="text-center">
+                                <i class="fas fa-seedling text-green-500 text-5xl mb-4"></i>
+                                <h3 class="text-2xl font-bold mb-2">Sustainable Growth</h3>
+                                <p class="text-gray-600">Cultivating Kenya's finest pineapples while supporting local communities and sustainable agriculture practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Analysis -->
+        <section id="market" class="section">
+            <h2 class="section-title text-3xl">Market Analysis</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Pineapple Market Overview</h3>
+                    <p class="mb-4">Kenya's pineapple market shows significant growth potential with export values increasing by <span class="font-bold text-green-600">299.39%</span> over the past 5 years.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                        <div class="stat-card">
+                            <h4 class="text-yellow-500 text-4xl font-bold">$29M</h4>
+                            <p class="text-gray-600">Export Value (2023)</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4 class="text-yellow-500 text-4xl font-bold">50 tons</h4>
+                            <p class="text-gray-600">Yield per Hectare</p>
+                        </div>
+                    </div>
+                    
+                    <p class="mb-4">Key production regions include Thika, Malindi, and Kisii, with favorable tropical climate enabling year-round production.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Target Audience</h3>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Domestic Market</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Urban retail chains and supermarkets</li>
+                                <li>Hotels, restaurants, and catering services</li>
+                                <li>Local fruit vendors and markets</li>
+                                <li>Middle and upper-class urban consumers</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Export Market</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>European Union countries</li>
+                                <li>Middle Eastern markets</li>
+                                <li>African countries (esp. Uganda)</li>
+                                <li>Specialized organic/fair-trade markets</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Major Competitors</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Del Monte Kenya Limited</strong> - Dominant player with established international distribution</li>
+                                <li><strong>Kakuzi Limited</strong> - Strong export operations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Model -->
+        <section id="business" class="section">
+            <h2 class="section-title text-3xl">Business Model</h2>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4">Recommended Business Structure</h3>
+                <div class="pineapple-card bg-white p-6">
+                    <h4 class="text-xl font-bold mb-4 text-center text-green-600">Limited Liability Company (LLC)</h4>
+                    <p class="text-center mb-6">Optimal business structure for a pineapple company in Kenya</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-bold mb-3 text-yellow-600">Advantages</h5>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Separate legal entity providing personal asset protection</li>
+                                <li>Ability to attract investors through share issuance</li>
+                                <li>Enhanced credibility with banks and partners</li>
+                                <li>Favorable tax planning opportunities</li>
+                                <li>Easier to transfer ownership</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-bold mb-3 text-yellow-600">Considerations</h5>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>More paperwork and record-keeping</li>
+                                <li>Higher setup and maintenance costs</li>
+                                <li>Compliance with company regulations</li>
+                                <li>Annual filing requirements</li>
+                            </ul>
+                            <p class="mt-4 text-sm italic">Registration requires: company name reservation, memorandum and articles of association, certificate of incorporation, and tax registration with KRA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Diversified Revenue Streams</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="stat-card">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-apple-alt text-2xl text-yellow-500 mr-3"></i>
+                            <h4 class="text-xl font-bold">Fresh Pineapple</h4>
+                        </div>
+                        <p>Direct sales to supermarkets, hotels, restaurants, export markets, and farmers' markets.</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-glass-whiskey text-2xl text-yellow-500 mr-3"></i>
+                            <h4 class="text-xl font-bold">Processed Products</h4>
+                        </div>
+                        <p>Juice, dried fruit, jam, and other value-added products sold through retail and wholesale channels.</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-seedling text-2xl text-yellow-500 mr-3"></i>
+                            <h4 class="text-xl font-bold">By-Products</h4>
+                        </div>
+                        <p>Utilizing peels and crowns for animal feed, compost, and fiber-based products.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Development -->
+        <section id="product" class="section">
+            <h2 class="section-title text-3xl">Product Development</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Types of Pineapple Products</h3>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Fresh Pineapple</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Premium whole pineapples (sorted by size and ripeness)</li>
+                                <li>Pre-cut, ready-to-eat pineapple chunks and slices</li>
+                                <li>Organic pineapples (certified)</li>
+                                <li>Specialty varieties for niche markets</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Processed Fruit Products</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>100% Pure Pineapple Juice (no added sugar)</li>
+                                <li>Pineapple Juice Concentrate for export markets</li>
+                                <li>Dried Pineapple (natural and flavored varieties)</li>
+                                <li>Frozen Pineapple Chunks for smoothies and desserts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Value-Added Products</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Pineapple Jam and Preserves (various formulations)</li>
+                                <li>Pineapple-Based Sauces and Marinades</li>
+                                <li>Pineapple Wine and Vinegar for culinary applications</li>
+                                <li>Pineapple-Infused Honey and specialty products</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">By-Products</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Bromelain Enzyme Extract for pharmaceutical uses</li>
+                                <li>Pineapple Fiber from leaves for eco-friendly textiles</li>
+                                <li>Organic Fertilizer from composted waste</li>
+                                <li>Animal Feed additives from processing by-products</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pineapple-card bg-white p-6 mt-8">
+                        <h4 class="text-xl font-bold mb-3 text-center text-green-600">Sustainable Production Focus</h4>
+                        <p class="mb-4">Our circular economy approach ensures all parts of the pineapple are utilized, creating multiple revenue streams while minimizing environmental impact.</p>
+                        <div class="flex justify-center">
+                            <i class="fas fa-recycle text-5xl text-green-500"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Operational Plan -->
+        <section id="operations" class="section">
+            <h2 class="section-title text-3xl">Operational Plan</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Agricultural Practices</h3>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Soil Preparation</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Thorough soil testing targeting optimal pH of 5.5-6.5</li>
+                                <li>Land clearing followed by plowing 8-10 inches deep</li>
+                                <li>Application of organic matter to improve soil structure</li>
+                                <li>Raised beds formation in areas with poor drainage</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Planting Techniques</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Double/triple row planting for efficient land use</li>
+                                <li>30cm between plants, 60-90cm between rows</li>
+                                <li>Suckers planted 10-15cm deep</li>
+                                <li>Mulching implementation for moisture conservation</li>
+                                <li>Planting timed with beginning of rainy season</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Irrigation & Fertilization</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Drip irrigation system for water efficiency</li>
+                                <li>Initial manure/compost application (10-15 tons/hectare)</li>
+                                <li>Regular NPK fertilizer application (15:15:15)</li>
+                                <li>Foliar feeding at critical growth stages</li>
+                                <li>Micronutrient supplementation based on soil tests</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Location Strategy</h3>
+                    <div class="pineapple-card bg-white p-6 mb-6">
+                        <h4 class="text-xl font-bold mb-3 text-center text-green-600">Thika Region</h4>
+                        <p class="mb-4">Central Kenya location offering ideal growing conditions for pineapples and strategic access to processing facilities and markets.</p>
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+                            <div class="text-center">
+                                <i class="fas fa-temperature-high text-3xl text-yellow-500 mb-2"></i>
+                                <p class="font-semibold">22-28°C</p>
+                                <p class="text-sm text-gray-600">Optimal Temperature</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-cloud-rain text-3xl text-blue-500 mb-2"></i>
+                                <p class="font-semibold">900-1200mm</p>
+                                <p class="text-sm text-gray-600">Annual Rainfall</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold mb-4">Facility Requirements</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="mb-4">
+                            <h5 class="font-semibold mb-2">Farm Area</h5>
+                            <div class="progress-bar">
+                                <div class="progress-bar-fill" style="width: 70%"></div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">70 hectares (initial phase: 20 hectares)</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5 class="font-semibold mb-2">Processing Facility</h5>
+                            <div class="progress-bar">
+                                <div class="progress-bar-fill" style="width: 60%"></div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">2,000 sq. meters with cold storage capacity</p>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold mb-2">Water Supply</h5>
+                            <div class="progress-bar">
+                                <div class="progress-bar-fill" style="width: 85%"></div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">Well + rainwater harvesting system</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marketing Strategy -->
+        <section id="marketing" class="section">
+            <h2 class="section-title text-3xl">Marketing Strategy</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Branding Ideas & Messaging</h3>
+                    
+                    <div class="pineapple-card bg-white p-6 mb-6">
+                        <h4 class="text-xl font-bold mb-3 text-center text-green-600">Brand Name</h4>
+                        <div class="flex justify-center space-x-4 mb-6">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full font-medium">Golden Crown</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full font-medium">AfriPine</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full font-medium">Sunshine Harvest</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full font-medium">Kenya Sweet</span>
+                        </div>
+                        
+                        <h5 class="font-semibold mb-2">Core Brand Values</h5>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Authenticity</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Quality</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Sustainability</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Community</span>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h5 class="font-semibold mb-2 text-center">Primary Brand Message</h5>
+                            <p class="text-center italic">"Sunshine-sweet pineapples from Kenya's fertile soils, grown with care for people and planet."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xl font-semibold mb-3">Visual Identity Elements</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Logo incorporating pineapple imagery with Kenyan cultural elements</li>
+                            <li>Vibrant yet natural color palette (yellows, greens, earth tones)</li>
+                            <li>Clean, modern packaging with transparent elements</li>
+                            <li>Certification badges prominently displayed (organic, fair trade)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Advertising Channels</h3>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Local Market Channels</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Radio advertisements in major urban centers</li>
+                                <li>Print ads in food and lifestyle magazines</li>
+                                <li>Billboards in strategic urban locations</li>
+                                <li>Sampling stations in supermarkets</li>
+                                <li>Social media campaigns targeting younger demographics</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Export Market Channels</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>International trade shows and food exhibitions</li>
+                                <li>Digital marketing targeting international buyers</li>
+                                <li>Partnership with export promotion agencies</li>
+                                <li>B2B relationship marketing with importers</li>
+                                <li>Certification and traceability emphasized in marketing materials</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pineapple-card bg-white p-6 mt-8">
+                        <h4 class="text-xl font-bold mb-3 text-center text-green-600">Digital Marketing Focus</h4>
+                        <p class="mb-4">Leveraging digital platforms to reach both local and international markets in a cost-effective manner.</p>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <i class="fab fa-instagram text-3xl text-purple-500 mb-2"></i>
+                                <p class="font-semibold">Instagram</p>
+                                <p class="text-sm text-gray-600">Visual storytelling</p>
+                            </div>
+                            <div>
+                                <i class="fab fa-tiktok text-3xl text-black mb-2"></i>
+                                <p class="font-semibold">TikTok</p>
+                                <p class="text-sm text-gray-600">Gen Z engagement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Projections -->
+        <section id="financial" class="section">
+            <h2 class="section-title text-3xl">Financial Projections</h2>
+            
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4">Startup Costs Estimate</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Cost (KES)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Land & Infrastructure</td>
+                                <td>17,000,000 - 22,500,000</td>
+                            </tr>
+                            <tr>
+                                <td>Farming Equipment & Machinery</td>
+                                <td>7,400,000</td>
+                            </tr>
+                            <tr>
+                                <td>Processing Facility & Equipment</td>
+                                <td>18,000,000 - 26,000,000</td>
+                            </tr>
+                            <tr>
+                                <td>Planting Materials & Farm Inputs</td>
+                                <td>5,600,000</td>
+                            </tr>
+                            <tr>
+                                <td>Business Setup & Compliance</td>
+                                <td>1,450,000</td>
+                            </tr>
+                            <tr>
+                                <td>Operating Capital (12 months)</td>
+                                <td>10,800,000</td>
+                            </tr>
+                            <tr class="font-bold bg-yellow-50">
+                                <td>Total Estimated Startup Cost</td>
+                                <td>60,250,000 - 75,750,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-center font-medium mt-4">Approximately USD 468,000 - 588,000</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Pricing Strategy</h3>
+                    
+                    <div class="pineapple-card bg-white p-6 mb-6">
+                        <h4 class="text-xl font-bold mb-3 text-center text-green-600">Fresh Pineapple Pricing</h4>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold">Premium Grade (Export Quality)</h5>
+                                <p class="text-yellow-600 font-bold">KES 80-100 per kg</p>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-semibold">Standard Grade</h5>
+                                <p class="text-yellow-600 font-bold">KES 60-80 per kg</p>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-semibold">Processing Grade</h5>
+                                <p class="text-yellow-600 font-bold">KES 40-50 per kg</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pineapple-card bg-white p-6">
+                        <h4 class="text-xl font-bold mb-3 text-center text-green-600">Processed Products Pricing</h4>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold">Pure Pineapple Juice (1L)</h5>
+                                <p class="text-yellow-600 font-bold">KES 200-250 retail</p>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-semibold">Dried Pineapple (100g)</h5>
+                                <p class="text-yellow-600 font-bold">KES 150-180 retail</p>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-semibold">Pineapple Jam (250g)</h5>
+                                <p class="text-yellow-600 font-bold">KES 180-220 retail</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Projected Returns</h3>
+                    
+                    <div class="pineapple-card bg-white p-6 mb-6">
+                        <h4 class="text-xl font-bold mb-3 text-center text-green-600">Revenue Projections</h4>
+                        
+                        <div class="space-y-3">
+                            <div>
+                                <h5 class="font-semibold text-sm">Year 1</h5>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-fill" style="width: 30%"></div>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span>KES 14M</span>
+                                    <span class="text-gray-500">(Initial production year)</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-semibold text-sm">Year 3</h5>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-fill" style="width: 65%"></div>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span>KES 45M</span>
+                                    <span class="text-gray-500">(Break-even point)</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-semibold text-sm">Year 5</h5>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-fill" style="width: 90%"></div>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span>KES 85M</span>
+                                    <span class="text-gray-500">(Full production capacity)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="font-bold mb-6 text-center">Key Financial Metrics</h4>
+                        
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-600 mb-1">25-30%</div>
+                                <p class="text-sm text-gray-600">Profit Margin by Year 5</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-600 mb-1">3 years</div>
+                                <p class="text-sm text-gray-600">Break-even Period</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-600 mb-1">22%</div>
+                                <p class="text-sm text-gray-600">Projected ROI</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-600 mb-1">5 years</div>
+                                <p class="text-sm text-gray-600">Loan Repayment Period</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal and Regulatory Compliance -->
+        <section id="legal" class="section">
+            <h2 class="section-title text-3xl">Legal and Regulatory Compliance</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Important Licenses and Permits</h3>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Business Registration</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Certificate of Incorporation (LLC)</strong> - Required to establish your company as a legal entity in Kenya</li>
+                                <li><strong>KRA PIN Certificate & Tax Compliance</strong> - Mandatory for all business operations and tax filing</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Agricultural Specific Permits</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Class B Permit (Agriculture & Husbandry)</strong> - Required for foreign investors in agricultural businesses</li>
+                                <li><strong>HCD License & AFA Registration</strong> - Horticultural Crops Directorate license for crop cultivation</li>
+                                <li><strong>Water Resource Use Permit</strong> - For irrigation and processing water usage</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Food Processing & Export Licenses</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Food Processing License</strong> - From Ministry of Health for processing facilities</li>
+                                <li><strong>Export License & Phytosanitary Certificate</strong> - For international shipments of fresh and processed products</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Compliance Requirements</h3>
+                    
+                    <div class="pineapple-card bg-white p-6 mb-6">
+                        <h4 class="text-xl font-bold mb-3 text-center text-green-600">Food Safety Standards</h4>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold flex items-center">
+                                    <i class="fas fa-certificate text-yellow-500 mr-2"></i>
+                                    HACCP Certification
+                                </h5>
+                                <p class="text-sm">Hazard Analysis Critical Control Points system implementation required for processing facility.</p>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-semibold flex items-center">
+                                    <i class="fas fa-certificate text-yellow-500 mr-2"></i>
+                                    Kenya Bureau of Standards
+                                </h5>
+                                <p class="text-sm">Compliance with KS EAS 770:2011 for fresh fruits and KS EAS 41:2000 for processed fruit products.</p>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-semibold flex items-center">
+                                    <i class="fas fa-certificate text-yellow-500 mr-2"></i>
+                                    Global G.A.P Certification
+                                </h5>
+                                <p class="text-sm">Recommended for export markets, especially for EU destinations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="font-bold mb-4 text-center">Environmental Compliance</h4>
+                        
+                        <ul class="list-disc pl-5 space-y-3">
+                            <li><strong>Environmental Impact Assessment (EIA)</strong> from NEMA required before establishing processing facility</li>
+                            <li><strong>Waste Management Plan</strong> must be approved and implemented according to local regulations</li>
+                            <li><strong>Water Use Permit</strong> from Water Resources Authority for irrigation and processing</li>
+                            <li><strong>Carbon Footprint Reporting</strong> increasingly important for export markets and ESG compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Timeline -->
+        <section id="timeline" class="section">
+            <h2 class="section-title text-3xl">Implementation Timeline</h2>
+            <h3 class="text-2xl font-semibold mb-6 text-center">5-Phase Launch Strategy for Golden Crown Pineapples</h3>
+            <p class="mb-8 text-center">Strategic roadmap for establishing a successful pineapple business in Kenya</p>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="timeline-item">
+                    <h4 class="text-xl font-bold text-yellow-600 mb-2">Phase 1: Preparation & Planning</h4>
+                    <p class="text-sm text-gray-500 mb-2">Months 1-3</p>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                        <li>Company registration and business setup</li>
+                        <li>Land acquisition and soil analysis</li>
+                        <li>Securing initial investment and financing</li>
+                        <li>Detailed business and operations planning</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4 class="text-xl font-bold text-yellow-600 mb-2">Phase 2: Farm Development</h4>
+                    <p class="text-sm text-gray-500 mb-2">Months 4-9</p>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                        <li>Land preparation and infrastructure development</li>
+                        <li>Installation of irrigation systems</li>
+                        <li>Initial planting of 20 acres with Smooth Cayenne</li>
+                        <li>Recruitment and training of core farm team</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4 class="text-xl font-bold text-yellow-600 mb-2">Phase 3: Processing Facility Setup</h4>
+                    <p class="text-sm text-gray-500 mb-2">Months 10-15</p>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                        <li>Construction of processing facility</li>
+                        <li>Procurement and installation of equipment</li>
+                        <li>HACCP implementation and certification process</li>
+                        <li>Development of quality control protocols</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4 class="text-xl font-bold text-yellow-600 mb-2">Phase 4: Market Entry</h4>
+                    <p class="text-sm text-gray-500 mb-2">Months 16-20</p>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                        <li>First harvest and initial processing runs</li>
+                        <li>Local market penetration and distribution setup</li>
+                        <li>Branding and marketing campaign launch</li>
+                        <li>Onboarding initial business clients (hotels, supermarkets)</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4 class="text-xl font-bold text-yellow-600 mb-2">Phase 5: Growth & Expansion</h4>
+                    <p class="text-sm text-gray-500 mb-2">Months 21-36</p>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                        <li>Export market entry and international certification</li>
+                        <li>Expansion of production area to full capacity</li>
+                        <li>Development of advanced product lines</li>
+                        <li>Implementation of outgrower scheme with local farmers</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section id="conclusion" class="section">
+            <h2 class="section-title text-3xl">Conclusion & Next Steps</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Investment Opportunity Highlights</h3>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn bg-yellow-50" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Growing Market Potential</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <p>Kenya's pineapple export market has grown by 299% over 5 years, with increasing demand in EU, Middle East, and regional markets.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn bg-yellow-50" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Sustainable & Integrated Model</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <p>Circular economy approach utilizing all parts of the pineapple, minimizing waste and maximizing revenue streams while supporting environmental sustainability.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn bg-yellow-50" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Strong Financial Returns</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <p>Projected 25-30% profit margins by Year 5 with diversified revenue streams. Break-even expected by Year 3 with continuous growth potential.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <button class="collapsible-btn bg-yellow-50" onclick="toggleCollapsible(this)">
+                            <span class="font-semibold">Community Impact</span>
+                            <i class="fas fa-chevron-down rotate-icon"></i>
+                        </button>
+                        <div class="collapsible-content bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
+                            <p>Supporting local farmers through outgrower schemes, creating rural employment, and implementing sustainable agricultural practices that benefit the entire community.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="pineapple-card bg-white p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-center text-green-600">Ready to Invest in Golden Crown Pineapples?</h3>
+                        <p class="mb-6 text-center">Join us in revolutionizing Kenya's pineapple industry with a sustainable, profitable, and socially responsible venture.</p>
+                        
+                        <div class="flex justify-center mb-8">
+                            <div class="h-24 w-24 rounded-full bg-yellow-400 flex items-center justify-center">
+                                <i class="fas fa-hand-holding-seedling text-white text-4xl"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <h4 class="font-bold mb-2">Next Steps:</h4>
+                            <ul class="inline-block text-left space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    Schedule an investor presentation
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    Visit our proposed site in Thika
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    Review detailed financial projections
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    Discuss investment and partnership options
+                                </li>
+                            </ul>
+                        </div>
+                        
+                       <div class="mt-8 text-center">
+    <a href="contact.html">
+        <button class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-1">
+            Contact Us Today
+        </button>
+    </a>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="py-8 mt-8 border-t border-gray-200">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-xl font-bold">
+                        <span class="text-yellow-500">Golden Crown</span> 
+                        <span class="text-green-600">Pineapples</span>
+                    </h2>
+                    <p class="text-gray-600 text-sm">Comprehensive Business Plan 2024</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-gray-600 text-sm mb-2">For more information, contact:</p>
+                    <p class="font-semibold">info@goldencrown-pineapples.com</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Function to toggle collapsible content
+        function toggleCollapsible(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.rotate-icon');
+            
+            content.classList.toggle('active-collapsible');
+            
+            if (content.classList.contains('active-collapsible')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0)';
+            }
+        }
+        
+        // Active navigation link
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Initialize by expanding some collapsible sections
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-expand the first collapsible in each section
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const firstCollapsible = section.querySelector('.collapsible-btn');
+                if (firstCollapsible) {
+                    toggleCollapsible(firstCollapsible);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

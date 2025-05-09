@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Crown Pineapples - Kenya's Premium Pineapple Business</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(90deg, #FFD700 0%, #ffc107 100%);
+        }
+
+        .card {
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-card {
+            transition: all 0.3s ease;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-btn {
+            transition: all 0.2s ease;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .email-btn {
+            background: linear-gradient(45deg, #FF416C 0%, #FF4B2B 100%);
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(45deg, #25D366 0%, #128C7E 100%);
+        }
+
+        .call-btn {
+            background: linear-gradient(45deg, #4481EB 0%, #04BEFE 100%);
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #FFD700;
+            border-radius: 2px;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .business-model-card {
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .business-model-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: #FFD700;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .highlight {
+            color: #ffc107;
+            font-weight: 600;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 3rem;
+            color: #ffd700;
+            overflow: hidden;
+            position: relative;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="text-yellow-500 mr-2">
+                        <i class="fas fa-pineapple text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-bold text-gray-800 text-xl">Golden Crown</span>
+                        <span class="font-bold text-yellow-500 text-xl">Pineapples</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-gray-900">About</a>
+                    <a href="#business" class="nav-link text-gray-700 hover:text-gray-900">Business</a>
+                    <a href="#financials" class="nav-link text-gray-700 hover:text-gray-900">Financials</a>
+                    <a href="#team" class="nav-link text-gray-700 hover:text-gray-900">Team</a>
+                </div>
+                <a href="#contact" class="gradient-bg px-4 py-2 rounded-full text-white font-medium hover:shadow-lg transition duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Golden Crown Pineapples</h1>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                Cultivating Kenya's finest pineapples while supporting local communities
+                and sustainable agriculture practices.
+            </p>
+            <div class="mt-10 flex justify-center space-x-4">
+                <a href="index.html" class="bg-white px-6 py-3 rounded-full text-yellow-500 font-medium hover:shadow-lg transition duration-300">
+                    Our Business
+                </a>
+                <a href="#contact" class="bg-green-600 px-6 py-3 rounded-full text-white font-medium hover:shadow-lg transition duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Plan Section -->
+    <section class="py-16 bg-white" id="about">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-2 text-center">Comprehensive Business Plan 2024</h2>
+            <p class="text-center text-gray-600 mb-12">Establishing a Premium Pineapple Production and Processing Company in Kenya</p>
+
+            <!-- Market Analysis -->
+            <div class="mb-20" id="market">
+                <h3 class="text-2xl font-bold section-title">Market Analysis</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <div class="stat-card p-6">
+                        <h4 class="text-xl font-semibold mb-4">Pineapple Market Overview</h4>
+                        <p class="text-gray-600 mb-6">
+                            Kenya's pineapple market shows significant growth potential with export values increasing by 299.39% over the past 5 years.
+                        </p>
+                        <div class="flex justify-around items-center">
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-yellow-500">$29M</p>
+                                <p class="text-sm text-gray-500">Export Value (2023)</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-yellow-500">50 tons</p>
+                                <p class="text-sm text-gray-500">Yield per Hectare</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card p-6">
+                        <h4 class="text-xl font-semibold mb-4">Target Audience</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2"><i class="fas fa-check"></i></span>
+                                <span>Urban retail chains and supermarkets</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2"><i class="fas fa-check"></i></span>
+                                <span>Hotels, restaurants, and catering services</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2"><i class="fas fa-check"></i></span>
+                                <span>Local fruit vendors and markets</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2"><i class="fas fa-check"></i></span>
+                                <span>European Union countries</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2"><i class="fas fa-check"></i></span>
+                                <span>Middle Eastern markets</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Model -->
+            <div class="mb-20" id="business">
+                <h3 class="text-2xl font-bold section-title">Business Model</h3>
+                <p class="text-gray-600 mb-8">Our diversified approach to pineapple production and processing</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="business-model-card shadow-sm rounded-lg p-6 bg-white">
+                        <div class="text-yellow-500 text-4xl mb-4">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Fresh Pineapple</h4>
+                        <p class="text-gray-600">
+                            Direct sales to supermarkets, hotels, restaurants, export markets, and farmers' markets.
+                        </p>
+                    </div>
+                    
+                    <div class="business-model-card shadow-sm rounded-lg p-6 bg-white">
+                        <div class="text-red-500 text-4xl mb-4">
+                            <i class="fas fa-glass-whiskey"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Processed Products</h4>
+                        <p class="text-gray-600">
+                            Juice, dried fruit, jam, and other value-added products sold through retail and wholesale channels.
+                        </p>
+                    </div>
+                    
+                    <div class="business-model-card shadow-sm rounded-lg p-6 bg-white">
+                        <div class="text-green-500 text-4xl mb-4">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">By-Products</h4>
+                        <p class="text-gray-600">
+                            Utilizing peels and crowns for animal feed, compost, and fiber-based products.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="stat-card p-6 mt-10">
+                    <h4 class="text-xl font-semibold mb-4">Recommended Business Structure</h4>
+                    <h5 class="text-lg font-medium mb-2">Limited Liability Company (LLC)</h5>
+                    <p class="text-gray-600 mb-4">Optimal business structure for a pineapple company in Kenya</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h6 class="font-medium mb-2">Advantages:</h6>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2"><i class="fas fa-check"></i></span>
+                                    <span>Separate legal entity providing personal asset protection</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2"><i class="fas fa-check"></i></span>
+                                    <span>Ability to attract investors through share issuance</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2"><i class="fas fa-check"></i></span>
+                                    <span>Enhanced credibility with banks and partners</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2"><i class="fas fa-check"></i></span>
+                                    <span>Favorable tax planning opportunities</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h6 class="font-medium mb-2">Considerations:</h6>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <span class="text-blue-500 mr-2"><i class="fas fa-info-circle"></i></span>
+                                    <span>More paperwork and record-keeping</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-500 mr-2"><i class="fas fa-info-circle"></i></span>
+                                    <span>Higher setup and maintenance costs</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-500 mr-2"><i class="fas fa-info-circle"></i></span>
+                                    <span>Compliance with company regulations</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-500 mr-2"><i class="fas fa-info-circle"></i></span>
+                                    <span>Annual filing requirements</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Projections -->
+            <div class="mb-20" id="financials">
+                <h3 class="text-2xl font-bold section-title">Financial Projections</h3>
+                <p class="text-gray-600 mb-8">Estimated costs and projected returns</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="stat-card p-6">
+                        <h4 class="text-xl font-semibold mb-4">Startup Costs Estimate</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Cost (KES)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Land & Infrastructure</td>
+                                    <td>17,000,000 - 22,500,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Farming Equipment & Machinery</td>
+                                    <td>7,400,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Processing Facility & Equipment</td>
+                                    <td>18,000,000 - 26,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Operating Capital (12 months)</td>
+                                    <td>10,800,000</td>
+                                </tr>
+                                <tr class="font-medium">
+                                    <td>Total Estimated Startup Cost</td>
+                                    <td>60,250,000 - 75,750,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="text-sm text-gray-500 mt-2">Approximately USD 468,000 - 588,000</p>
+                    </div>
+                    
+                    <div class="stat-card p-6">
+                        <h4 class="text-xl font-semibold mb-4">Projected Returns</h4>
+                        <h5 class="font-medium mb-3">Revenue Projections</h5>
+                        <div class="flex justify-between items-center mb-8">
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-green-500">KES 14M</p>
+                                <p class="text-xs text-gray-500">Year 1</p>
+                                <p class="text-xs text-gray-500">(Initial production)</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-green-500">KES 45M</p>
+                                <p class="text-xs text-gray-500">Year 3</p>
+                                <p class="text-xs text-gray-500">(Break-even point)</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-green-500">KES 85M</p>
+                                <p class="text-xs text-gray-500">Year 5</p>
+                                <p class="text-xs text-gray-500">(Full capacity)</p>
+                            </div>
+                        </div>
+                        
+                        <h5 class="font-medium mb-3">Key Financial Metrics</h5>
+                        <div class="flex justify-between items-center">
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-yellow-500">25-30%</p>
+                                <p class="text-xs text-gray-500">Profit Margin</p>
+                                <p class="text-xs text-gray-500">by Year 5</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-yellow-500">3 years</p>
+                                <p class="text-xs text-gray-500">Break-even</p>
+                                <p class="text-xs text-gray-500">Period</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-yellow-500">5 years</p>
+                                <p class="text-xs text-gray-500">Loan Repayment</p>
+                                <p class="text-xs text-gray-500">Period</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investment Opportunity -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold section-title">Investment Opportunity</h3>
+                <div class="stat-card p-6 mt-8">
+                    <h4 class="text-xl font-semibold mb-4">Why Invest in Golden Crown Pineapples?</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-3 mt-1"><i class="fas fa-chart-line"></i></span>
+                            <span>Kenya's pineapple export market has grown by 299% over 5 years, with increasing demand in EU, Middle East, and regional markets.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-3 mt-1"><i class="fas fa-recycle"></i></span>
+                            <span>Circular economy approach utilizing all parts of the pineapple, minimizing waste and maximizing revenue streams while supporting environmental sustainability.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-3 mt-1"><i class="fas fa-money-bill-wave"></i></span>
+                            <span>Projected 25-30% profit margins by Year 5 with diversified revenue streams. Break-even expected by Year 3 with continuous growth potential.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-3 mt-1"><i class="fas fa-hands-helping"></i></span>
+                            <span>Supporting local farmers through outgrower schemes, creating rural employment, and implementing sustainable agricultural practices that benefit the entire community.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team Section -->
+    <section class="py-16 bg-gray-50" id="team">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-2 text-center">Meet Our Team</h2>
+            <p class="text-center text-gray-600 mb-12">The driving force behind Golden Crown Pineapples</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tiffany Mokaya Card -->
+                <div class="team-card shadow-lg overflow-hidden">
+                    <div class="p-6 text-center">
+                        <div class="avatar bg-yellow-100 mb-4">
+                            <span>T</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-1">Tiffany Mokaya Bonareri</h3>
+                        <p class="text-gray-500 mb-4">Business Development Manager</p>
+                        <div class="flex justify-center space-x-3 mb-4">
+                            <a href="mailto:tiffyhales008@gmail.com" class="email-btn contact-btn px-3 py-2 rounded-full text-white inline-flex items-center">
+                                <i class="fas fa-envelope mr-2"></i> Email
+                            </a>
+                            <a href="https://wa.me/254741996970" class="whatsapp-btn contact-btn px-3 py-2 rounded-full text-white inline-flex items-center">
+                                <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                            </a>
+                            <a href="tel:+254741996970" class="call-btn contact-btn px-3 py-2 rounded-full text-white inline-flex items-center">
+                                <i class="fas fa-phone-alt mr-2"></i> Call
+                            </a>
+                        </div>
+                        <div class="text-gray-600">
+                            <p class="text-sm mb-1"><i class="fas fa-phone-alt mr-2"></i> 0741996970</p>
+                            <p class="text-sm"><i class="fas fa-envelope mr-2"></i> tiffyhales008@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Antony Mokaya Card -->
+                <div class="team-card shadow-lg overflow-hidden">
+                    <div class="p-6 text-center">
+                        <div class="avatar bg-blue-100 mb-4">
+                            <span>A</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-1">Antony Mokaya</h3>
+                        <p class="text-gray-500 mb-4">Financials Manager</p>
+                        <div class="flex justify-center space-x-3 mb-4">
+                            <a href="mailto:mtony166@gmail.com" class="email-btn contact-btn px-3 py-2 rounded-full text-white inline-flex items-center">
+                                <i class="fas fa-envelope mr-2"></i> Email
+                            </a>
+                            <a href="https://wa.me/254710172698" class="whatsapp-btn contact-btn px-3 py-2 rounded-full text-white inline-flex items-center">
+                                <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                            </a>
+                            <a href="tel:+254710172698" class="call-btn contact-btn px-3 py-2 rounded-full text-white inline-flex items-center">
+                                <i class="fas fa-phone-alt mr-2"></i> Call
+                            </a>
+                        </div>
+                        <div class="text-gray-600">
+                            <p class="text-sm mb-1"><i class="fas fa-phone-alt mr-2"></i> 0710172698</p>
+                            <p class="text-sm"><i class="fas fa-envelope mr-2"></i> mtony166@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Grace Mwaka Card -->
+                <div class="team-card shadow-lg overflow-hidden">
+                    <div class="p-6 text-center">
+                        <div class="avatar bg-green-100 mb-4">
+                            <span>G</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-1">Grace Mwaka</h3>
+                        <p class="text-gray-500 mb-4">Operations Manager</p>
+                        <div class="flex justify-center space-x-3 mb-4">
+                            <a href="mailto:gracemrabu442@gmail.com" class="email-btn contact-btn px-3 py-2 rounded-full text-white inline-flex items-center">
+                                <i class="fas fa-envelope mr-2"></i> Email
+                            </a>
+                            <a href="https://wa.me/254788653624" class="whatsapp-btn contact-btn px-3 py-2 rounded-full text-white inline-flex items-center">
+                                <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                            </a>
+                            <a href="tel:+254788653624" class="call-btn contact-btn px-3 py-2 rounded-full text-white inline-flex items-center">
+                                <i class="fas fa-phone-alt mr-2"></i> Call
+                            </a>
+                        </div>
+                        <div class="text-gray-600">
+                            <p class="text-sm mb-1"><i class="fas fa-phone-alt mr-2"></i> 0788653624</p>
+                            <p class="text-sm"><i class="fas fa-envelope mr-2"></i> gracemrabu442@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white" id="contact">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-2 text-center">Contact Us</h2>
+            <p class="text-center text-gray-600 mb-12">Interested in our premium pineapples? Get in touch with our team!</p>
+            
+            <div class="max-w-4xl mx-auto gradient-bg rounded-lg overflow-hidden shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-8 text-gray-800">
+                        <h3 class="text-2xl font-bold mb-4">Get In Touch</h3>
+                        <p class="mb-6">Join us in revolutionizing Kenya's pineapple industry with a sustainable, profitable, and socially responsible venture.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <span class="text-gray-800 mr-3 mt-1 w-6"><i class="fas fa-map-marker-alt"></i></span>
+                                <span>Malindi region, Kenya</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-800 mr-3 mt-1 w-6"><i class="fas fa-envelope"></i></span>
+                                <a href="mailto:info@goldencrown.co.ke" class="hover:underline">info@goldencrown.co.ke</a>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-800 mr-3 mt-1 w-6"><i class="fas fa-globe"></i></span>
+                                <span>www.goldencrown.co.ke</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-lg font-semibold mb-3">Next Steps:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <span class="text-gray-800 mr-3 mt-1"><i class="far fa-calendar-check"></i></span>
+                                    <span>Schedule an investor presentation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-800 mr-3 mt-1"><i class="fas fa-map-marked-alt"></i></span>
+                                    <span>Visit our proposed site in Thika</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-800 mr-3 mt-1"><i class="far fa-file-alt"></i></span>
+                                    <span>Review detailed financial projections</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-gray-800 mr-3 mt-1"><i class="fas fa-handshake"></i></span>
+                                    <span>Discuss investment and partnership options</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8">
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full px-6 py-3 bg-yellow-500 text-white font-medium rounded-lg hover:bg-yellow-600 transition duration-300">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About Us</h3>
+                    <p class="text-gray-400">Golden Crown Pineapples is committed to sustainable pineapple production while supporting local communities in Kenya.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="#business" class="text-gray-400 hover:text-white transition duration-300">Business Model</a></li>
+                        <li><a href="#financials" class="text-gray-400 hover:text-white transition duration-300">Financial Projections</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white transition duration-300">Our Team</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-2 mt-1"><i class="fas fa-phone-alt"></i></span>
+                            <span>Tiffany: 0741996970</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-2 mt-1"><i class="fas fa-phone-alt"></i></span>
+                            <span>Antony: 0710172698</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-2 mt-1"><i class="fas fa-phone-alt"></i></span>
+                            <span>Grace: 0788653624</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-2 mt-1"><i class="fas fa-envelope"></i></span>
+                            <a href="mailto:info@goldencrown.co.ke" class="hover:underline">info@goldencrown.co.ke</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-yellow-500 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-yellow-500 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#'" class="h-10 w-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-yellow-500 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="h-10 w-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-yellow-500 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Golden Crown Pineapples. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
